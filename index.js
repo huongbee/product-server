@@ -1,9 +1,17 @@
 const express = require('express');
 const { json } = require('body-parser');
 const { Product } = require('./models/product.model');
+const cors = require('cors');
 
 const app = express();
 app.use(json());
+app.use(cors());
+
+// app.use((req,res, next)=>{
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Methods','POST, GET')
+//     next();
+// })
 
 app.get('/', (req, res) => res.send({ success: true, message: 'Server is running' }));
 
