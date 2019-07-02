@@ -1,7 +1,7 @@
 const express = require('express');
 const { json } = require('body-parser');
 const { Product } = require('./models/product.model');
-const cors = require('cors');
+const  cors = require('cors');
 
 const app = express();
 app.use(json());
